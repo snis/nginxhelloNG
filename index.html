@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- Dan Snis @ Cuebid 2023 -->
+<!-- Testsida för lastbalanserare -->
+<!-- Ändra basecolor på rad 10 till önskad färg -->
+<!-- red, green, #bbb, #aaa, #dc3545 -->
+<html>
+<head>
+<title>Hello World</title>
+<style>
+:root {
+  --basecolor: hotpink;
+}
+body {
+  background: radial-gradient(var(--basecolor), #000) no-repeat fixed;
+  font-size: calc(15px + 0.390625vw);
+  font-family: Verdana, sans-serif;
+}
+.background_wrapper {
+background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzcwJyB2aWV3Qm94PScwIDAgMjYuNDU4IDE4LjUyMSc+PGRlZnM+PGNsaXBQYXRoIGlkPSdnJz48cGF0aCBmaWxsPSd1cmwoI2EpJyBkPSdNLS4xNzctLjE3N2gyNi42MzV2MjYuNjM1SC0uMTc3eicgc3R5bGU9J3BhaW50LW9yZGVyOnN0cm9rZSBmaWxsIG1hcmtlcnMnLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0nZSc+PHBhdGggZmlsbD0ndXJsKCNhKScgZD0nTS0uMTc3LS4xNzdoMjYuNjM1djI2LjYzNUgtLjE3N3onIHN0eWxlPSdwYWludC1vcmRlcjpzdHJva2UgZmlsbCBtYXJrZXJzJy8+PC9jbGlwUGF0aD48Y2xpcFBhdGggaWQ9J2QnPjxwYXRoIGZpbGw9J3VybCgjYSknIGQ9J00tLjE3Ny0uMTc3aDI2LjYzNXYyNi42MzVILS4xNzd6JyBzdHlsZT0ncGFpbnQtb3JkZXI6c3Ryb2tlIGZpbGwgbWFya2VycycvPjwvY2xpcFBhdGg+PGNsaXBQYXRoIGlkPSdjJz48cGF0aCBmaWxsPSd1cmwoI2EpJyBkPSdNLS4xNzctLjE3N2gyNi42MzV2MjYuNjM1SC0uMTc3eicgc3R5bGU9J3BhaW50LW9yZGVyOnN0cm9rZSBmaWxsIG1hcmtlcnMnLz48L2NsaXBQYXRoPjxsaW5lYXJHcmFkaWVudCBpZD0nYic+PHN0b3Agb2Zmc2V0PScwJyBzdG9wLWNvbG9yPScjZGMzNTQ1Jy8+PHN0b3Agb2Zmc2V0PScxJyBzdG9wLWNvbG9yPScjMDUyODViJy8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9J2YnIHgxPSczOS40MjMnIHgyPSc0Ny4wODcnIHkxPSc5My45MjcnIHkyPScxMDMuNDMnIGdyYWRpZW50VHJhbnNmb3JtPSd0cmFuc2xhdGUoLTEwLjI4IC00Ny4wMTcpIHNjYWxlKC42OTQyNSknIGdyYWRpZW50VW5pdHM9J3VzZXJTcGFjZU9uVXNlJz48c3RvcCBvZmZzZXQ9JzAnLz48c3RvcCBvZmZzZXQ9JzEnLz48L2xpbmVhckdyYWRpZW50PjxyYWRpYWxHcmFkaWVudCB4bGluazpocmVmPScjYicgaWQ9J2EnIGN4PSczNy4wNDInIGN5PSc4OS45NTgnIHI9JzE1Ljg3NScgZ3JhZGllbnRUcmFuc2Zvcm09J3RyYW5zbGF0ZSgtMTcuOTMzIC02Mi4zMjUpIHNjYWxlKC44Mzg4OCknIGdyYWRpZW50VW5pdHM9J3VzZXJTcGFjZU9uVXNlJy8+PC9kZWZzPjxnIHN0cm9rZS1kYXNob2Zmc2V0PSc3LjU1OScgc3Ryb2tlLWxpbmVjYXA9J3JvdW5kJyBzdHJva2UtbGluZWpvaW49J3JvdW5kJyBzdHJva2UtbWl0ZXJsaW1pdD0nMCc+PHBhdGggZD0nTTI2LjQ1OCA0LjQxNXYyMi4wNDJINC40MTZjLjkxOC0xMS4wMiAxOC4zNjgtMTMuNzc2IDIyLjA0Mi0yMi4wNDJ6JyBjbGlwLXBhdGg9J3VybCgjYyknIG9wYWNpdHk9Jy4yNScgc3R5bGU9J21peC1ibGVuZC1tb2RlOm5vcm1hbDtwYWludC1vcmRlcjpzdHJva2UgZmlsbCBtYXJrZXJzJyB0cmFuc2Zvcm09J21hdHJpeCgxIDAgMCAuNzkyMjEgMCAtMi40NCknLz48cGF0aCBkPSdNMjYuNDU4IDUuMzM0djIxLjEyNEg0LjQxNmMxLjIyOS02LjI4MyAxNy43Ny0xMC4wNCAyMi4wNDItMjEuMTI0eicgY2xpcC1wYXRoPSd1cmwoI2QpJyBvcGFjaXR5PScuMjUnIHN0eWxlPSdtaXgtYmxlbmQtbW9kZTpkYXJrZW47cGFpbnQtb3JkZXI6c3Ryb2tlIGZpbGwgbWFya2VycycgdHJhbnNmb3JtPSdtYXRyaXgoMSAwIDAgLjgyNjY2IDAgLTMuMzUpJy8+PHBhdGggZD0nTTI2LjQ1OCA2LjI1M3YyMC4yMDVINC40MTZjLjI2LTIuNjA1IDE5Ljk2My02LjI0NSAyMi4wNDItMjAuMjA1eicgY2xpcC1wYXRoPSd1cmwoI2UpJyBvcGFjaXR5PScuMjUnIHN0eWxlPSdtaXgtYmxlbmQtbW9kZTpkYXJrZW47cGFpbnQtb3JkZXI6c3Ryb2tlIGZpbGwgbWFya2VycycgdHJhbnNmb3JtPSdtYXRyaXgoMSAwIDAgLjg2NDI0IDAgLTQuMzQ1KScvPjwvZz48cGF0aCBmaWxsPSd1cmwoI2YpJyBkPSdNMjYuNDU4IDcuMTd2MTkuMjg4SDQuNDE2YzEuMzgtMy40ODUgMjAuMTgzIDEuMTEgMjIuMDQyLTE5LjI4NnonIGNsaXAtcGF0aD0ndXJsKCNnKScgb3BhY2l0eT0nLjI1JyBzdHlsZT0nbWl4LWJsZW5kLW1vZGU6ZGFya2VuO3BhaW50LW9yZGVyOnN0cm9rZSBmaWxsIG1hcmtlcnMnIHRyYW5zZm9ybT0nbWF0cml4KDEgMCAwIC45MDUzOSAwIC01LjQzNCknLz48L3N2Zz4="); no-repeat;
+padding:0px;
+position: fixed;
+background-size: cover;
+left: 0px;
+top: 0px;
+height: 100%;
+width: 100%;
+z-index: -1;
+}
+div.cuebidlogo {
+  top: 50px;
+  width: 16rem;
+  height: 5rem;
+  background: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgMjUwIDQzJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnPjxnIGZpbGw9JyNmZmYnPjxwYXRoIGQ9J00yLjUgMzIuNUM0MCA3LjUgNzcuNSA1IDEyNSA1czg1IDIuNSAxMjIuNSAyNy41aDIuNUMyMTUgNSAxNzIuNSAwIDEyNSAwUzM1IDUgMCAzMi41eicvPjxwYXRoIGQ9J003NS4yNDggMjMuNTNjLTEuOTA5LS44NDQtMy40NjMtMS4zNzYtNS43NzEtMS4zNzYtNi4wMzggMC05Ljg1NiA0LjE3My05Ljg1NiAxMC43NDQgMCA1Ljg2IDQuMTczIDkuOTg5IDEwLjEyMiA5Ljk4OSAyLjA4NiAwIDQuNjE3LS41MzMgNS45NDktMS4xNTV2LTMuOTA2Yy0xLjk5OC44ODgtMy41OTYgMS4zMzEtNS4yODMgMS4zMzEtNC4wODUgMC02Ljc0OC0yLjQ4Ni02Ljc0OC02LjYxNSAwLTQuMDQgMi40ODYtNi43NDggNi4wODItNi43NDggMS43MzEgMCAzLjI0LjQ0NCA1LjUwNSAxLjk1NHptMjEuMzc3IDE4Ljk2VjIyLjU1NmgtMy45NTF2MTQuMjUxYy0xLjI4OCAxLjgyLTIuOTc1IDIuNzk3LTQuNzUgMi43OTctMi43MDkgMC00LjA4NS0xLjU5OC00LjA4NS00LjM5NVYyMi41NTZoLTMuOTUxdjEyLjM4NmMwIDUuMDYgMi44NDEgNy45NDcgNi44ODEgNy45NDcgMS45NTQgMCA0LjI2Mi0xLjE1NSA1LjkwNS0yLjkzdjIuNTN6bTIyLjI0NS01Ljc3Yy0yLjMwOSAxLjUxLTQuNTczIDIuMzk3LTYuOTcgMi4zOTctMy44MTggMC02LjA4Mi0yLjA0Mi02LjcwNC01Ljk5M2gxNC4wM2MwLTcuMzctMy4zNzUtMTAuOTY2LTguNjU4LTEwLjk2Ni01LjUwNSAwLTkuMzIzIDQuMDg0LTkuMzIzIDEwLjEyMiAwIDUuNTA1IDMuNDYzIDEwLjYxMSA5LjY3OCAxMC42MTEgMy4zNzQgMCA1LjU1LS43NTUgNy45NDctMi4zNTN6bS0xMy41ODUtNi4yMTVjLjUzMy0zLjE1MyAyLjM1My00LjkyOCA1LjM3Mi00LjkyOCAyLjc5NyAwIDQuNTI4IDEuOTA5IDQuNjYxIDQuOTI4ek0xMjcuMjQgMTIuMjFoLTMuOTUxdjI5LjE2OGMxLjk1My45MzIgNC43OTQgMS41MSA3LjQxNCAxLjUxIDYuNjYgMCAxMC42NTUtNC4wNCAxMC42NTUtMTAuNzg5IDAtNS43MjctMy42NC05Ljk0NC04LjYxMy05Ljk0NC0xLjk5OCAwLTMuNzczLjU3Ny01LjUwNSAxLjgyem0wIDE1LjUzOGMxLjY4Ny0xLjUxIDIuODg2LTIuMDQyIDQuNTI4LTIuMDQyIDMuMzMgMCA1LjU1IDIuNzUyIDUuNTUgNi45NyAwIDMuNzczLTIuNTMgNi40ODItNi4wODIgNi40ODItMS4xNTUgMC0yLjg0Mi0uMjY3LTMuOTk2LS42MjJ6bTIyLjQ2LTUuMTk4aC0zLjk1MXYxOS45MzRoMy45NTF6bS40LTYuMDM4YzAtMS4yODctMS4wNjYtMi4zNTMtMi4zNTMtMi4zNTNzLTIuMzUzIDEuMDY2LTIuMzUzIDIuMzUzYzAgMS4yODggMS4wNjUgMi4zNTMgMi4zNTMgMi4zNTNzMi4zNTMtMS4wNjUgMi4zNTMtMi4zNTN6bTIyLjUtNC4zMDJoLTMuOTUxdjEwLjc0NGMtMS41OTgtLjU3Ny0yLjg0Mi0uOC00LjE3My0uOC01LjgxNiAwLTkuOTQ1IDQuMTMtOS45NDUgOS45MDEgMCA2LjM5MyAzLjczIDEwLjQzMyA5LjY3OCAxMC40MzNoOC4zOTF6bS0zLjk1MSAyNi45NDhoLTMuOTk2Yy00LjU3MyAwLTYuMDgyLTIuNzk3LTYuMDgyLTYuNTI2IDAtNC4xNzMgMi41NzUtNi45MjYgNi4zOTMtNi45MjYgMS4zMzIgMCAyLjM1My4yMjIgMy42ODUuNzU1eicgc3Ryb2tlLXdpZHRoPScxLjA0JyBhcmlhLWxhYmVsPSdjdWViaWQnLz48L2c+PC9zdmc+") no-repeat;
+  margin: 30px auto;
+}
+.card{
+  position: relative;
+  display: table;
+  justify-content: center;
+  align-items: center;
+  border-top: 10px solid var(--basecolor);
+  border-left: 1px solid var(--basecolor);
+  padding:  30px 30px 30px;
+  border-radius:15px;
+  backdrop-filter:blur(5px) ;
+  background:rgba(255,255, 255, 0.1);
+  overflow: hidden;
+  box-shadow:20px 20px 50px rgba(0, 0, 0, 0.5);
+  margin: 0px auto auto auto;
+}
+div.info {
+  display: table;
+  background: #eeeeee99;
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
+  margin: 0px auto auto auto;
+}
+div.info p {
+  display: table-row;
+  margin: 5px auto auto auto;
+}
+div.info p span {
+  display: table-cell;
+  padding: 10px;
+}
+p.smaller {
+  font-size: smaller;
+}
+div.check {
+  padding: 0px 0px 0px 0px;
+  display: table;
+  margin: 36px auto auto auto;
+  font-size: smaller;
+}
+#footer {
+  position: fixed;
+  bottom: 40px;
+  width: 100%;
+}
+#center {
+  width: 400px;
+  margin: 0 auto;
+  font: x-small Courier;
+  color: var(--basecolor);
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+</style>
+<script>
+var ref;
+function checkRefresh(){
+    if (document.cookie == "refresh=1") {
+        document.getElementById("check").checked = true;
+        ref = setTimeout(function(){location.reload();}, 1000);
+    } else {
+    }
+}
+function changeCookie() {
+    if (document.getElementById("check").checked) {
+        document.cookie = "refresh=1";
+        ref = setTimeout(function(){location.reload();}, 1000);
+    } else {
+        document.cookie = "refresh=0";
+        clearTimeout(ref);
+    }
+}
+</script>
+</head>
+<body onload="checkRefresh();">
+  <div class=background_wrapper></div><br/><br/>
+  <div class="cuebidlogo"></div>
+  <div class="card">
+    <div class="info">
+      <p><span>Server&nbsp;name:</span> <span>server_hostname</span></p>
+      <p><span>Server&nbsp;address:</span> <span>server_address</span></p>
+      <p class="smaller"><span>X-Forwarded-For:</span> <span>x_forwarded_for</span></p>
+      <p class="smaller"><span>Remote address:</span> <span>remote_address</span></p>
+      </br>
+      <p><span>Date:</span> <span>server_date</span></p>
+      <p><span>URI:</span> <span>server_url</span></p>
+      </br>
+      <p class="smaller"><span>UserAgent:</span> <span>user_agent</span></p>
+    </div>
+    <div class="check"><input type="checkbox" id="check" onchange="changeCookie()"> Auto Refresh
+    </div>
+  </div>
+  <div id="footer">
+    <div id="center" align="center">
+      Request ID: request_id<br/>
+      &copy; Cuebid AB, 2023
+    </div>
+  </div>
+</body>
+</html>
+
