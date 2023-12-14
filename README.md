@@ -15,4 +15,4 @@ bash ./rundocker.sh
 ```
 
 ## Screenshot
-[](screenshot/nginxhelloNG.jpg)
+[screenshot](screenshot/nginxhelloNG.jpg)
