@@ -13,3 +13,6 @@ docker build -t nginxhello-ng .
 
 bash ./rundocker.sh
 ```
+
+## Screenshot
+[Screenshot](screenshot/nginxhelloNG.jpg)
