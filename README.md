@@ -9,7 +9,7 @@ Added environment-flag for changing color of the container.
 
 ```
 cd nginxhelloNG
-docker build -t nginxhelloNG .
+docker build -t nginxhello-ng .
 
 bash ./rundocker.sh
 ```
